@@ -1,2 +1,18 @@
-<h4>this is handlebars</h4>
-<p>{{{stuff}}}</p>
+<div class="card">
+    {{postedStuff}}
+  <h5 class="card-header">{{stock.companyName}} {{stock.symbol}}</h5>
+  <div class="card-body" style="font-size: x-large;">
+    <p class="card-text">Latest Price: <strong>{{stock.latestPrice}}</strong> <br/> </p>
+
+    <p class="card-text">Previous Close: <strong>{{stock.previousClose}}</strong> <br/> </p>
+    <p class="card-text">Percent Change: <strong>{{stock.changePercent}}%</strong> <br/> </p>
+    <p class="card-text">Market Cap: <strong>${{stock.marketCap}}</strong> <br/> </p>
+    <p class="card-text">YTD Change: <strong>{{stock.ytdChange}}%</strong> <br/> </p>
+    <p class="card-text">52 High: <strong>{{stock.week52High}}</strong> <br/> </p>
+    <p class="card-text">52 Low: <strong>{{stock.week52Low}}</strong> <br/> </p>
+  </div>
+</div>
+
+{{!-- {{#each stock}}
+        {{@key}} | {{this}} <br/>
+     {{/each}} --}}
